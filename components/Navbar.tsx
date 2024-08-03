@@ -6,7 +6,7 @@ import { HiBars3, HiBars3BottomLeft } from "react-icons/hi2";
 export default function NavBar() {
   return (
     <div className="fixed bg-white w-full shadow-2xl z-50 py-4">
-      <div className="flex justify-between px-9 lg:justify-around">
+      <div className="flex justify-between px-3 md:px-9 lg:justify-around">
         <div className="flex space-x-2 items-center ">
           <div>
             <Image
@@ -54,6 +54,7 @@ export default function NavBar() {
           <HiBars3 className="size-8" />
         </div>
       </div>
+
       <div>
         <HiBars3BottomLeft className="size-14 -mt-4 bg-[#6C6FF2] rounded-full p-2 fixed text-white border-4 border-white right-[30%]" />
       </div>

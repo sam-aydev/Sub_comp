@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import img2 from "@/public/07-we-offer.svg";
 import { GoDot } from "react-icons/go";
@@ -6,7 +8,11 @@ import img1 from "@/public/icon26.svg";
 export default function OfferComp() {
   return (
     <div>
-      <div className="mt-16 px-8 md:flex">
+      <motion.div
+        initial={{ y: 100 }}
+        whileInView={{ y: 0 }}
+        className="mt-16 px-8 md:flex"
+      >
         <div className="md:w-1/2">
           <h2 className="text-2xl font-bold ">
             We Offer a Full Range of Digital Marketing Services!
@@ -59,9 +65,9 @@ export default function OfferComp() {
             <Image src={img2} width={500} height={600} alt="ims" className="" />
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div>
+      <motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
         <div className="mt-16 ">
           <h2 className="text-2xl font-bold text-center w-4/5 mx-auto">
             Affordable SEO services packages
@@ -122,6 +128,22 @@ export default function OfferComp() {
                 sint quaerat.
               </p>
             </div>
+
+            <div className="mt-7 md:mt-10">
+              <Image
+                src={img1}
+                alt="img"
+                width={200}
+                height={200}
+                className="size-20 mx-auto"
+              />
+              <h2 className="text-center mt-3 font-bold text-xl">Technology</h2>
+              <p className="text-center w-5/6 mx-auto mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                ipsam mollitia dolore consequatur dignissimos odit, aspernatur
+                sint quaerat.
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center justify-center space-x-5 mt-6">
@@ -133,7 +155,7 @@ export default function OfferComp() {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

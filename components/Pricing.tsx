@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import pricing1 from "@/public/pricing1.svg";
 
@@ -5,7 +7,7 @@ export default function Pricing() {
   return (
     <div>
       <div className="bg-slate-100 pt-16 pb-10">
-        <div>
+        <motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
           <h2 className="font-bold text-3xl text-center">
             Our Pricing Packages
           </h2>
@@ -18,10 +20,14 @@ export default function Pricing() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
             odit quod sequi accusamu.
           </p>
-        </div>
+        </motion.div>
 
         <div className="lg:grid-cols-3 md:grid md:grid-cols-2 md:align-middle md:place-items-center md:items-center">
-          <div className="bg-white hover:border-2 hover:border-blue-500 active:border-2 active:border-blue-500 rounded py-4 text-center w-4/5 mx-auto mt-16">
+          <motion.div
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
+            className="bg-white hover:border-2 hover:border-blue-500 active:border-2 active:border-blue-500 rounded py-4 text-center w-4/5 mx-auto mt-16"
+          >
             <Image
               src={pricing1}
               width={400}
@@ -47,9 +53,13 @@ export default function Pricing() {
             <button className="text-white mt-7 text-xs bg-black rounded-full px-5 py-2">
               ORDER NOW
             </button>
-          </div>
+          </motion.div>
 
-          <div className="bg-white hover:border-2 hover:border-blue-500 active:border-2 active:border-blue-500 rounded py-4 text-center w-4/5 mx-auto mt-5 md:mt-16">
+          <motion.div
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
+            className="bg-white hover:border-2 hover:border-blue-500 active:border-2 active:border-blue-500 rounded py-4 text-center w-4/5 mx-auto mt-5 md:mt-16"
+          >
             <Image
               src={pricing1}
               width={400}
@@ -75,9 +85,13 @@ export default function Pricing() {
             <button className="text-white mt-7 text-xs bg-black rounded-full px-5 py-2">
               ORDER NOW
             </button>
-          </div>
+          </motion.div>
 
-          <div className="bg-white lg:mt-16 mt-5 hover:border-2 hover:border-blue-500 active:border-2 active:border-blue-500 rounded py-4 text-center w-4/5 mx-auto ">
+          <motion.div
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
+            className="bg-white lg:mt-16 mt-5 hover:border-2 hover:border-blue-500 active:border-2 active:border-blue-500 rounded py-4 text-center w-4/5 mx-auto "
+          >
             <Image
               src={pricing1}
               width={400}
@@ -103,7 +117,7 @@ export default function Pricing() {
             <button className="text-white mt-7 text-xs bg-black rounded-full px-5 py-2">
               ORDER NOW
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
