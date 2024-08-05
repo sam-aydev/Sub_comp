@@ -80,7 +80,7 @@ export default function OfferComp() {
           <p className="mt-8 text-center mx-auto w-3/4">
             Lorem ipsum dolor sit, amet consectetur adipisicing.
           </p>
-          <div className="md:grid md:grid-cols-2 lg:grid-cols-3">
+          <div className="md:grid md:grid-cols-2 lg:grid-cols-4 lg:px-10">
             <div className="mt-10">
               <Image
                 src={img1}

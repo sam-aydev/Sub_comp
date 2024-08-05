@@ -7,7 +7,7 @@ export default function CaseStudy() {
   return (
     <div>
       <div className="bg-[url('/pattern-bg-lime.jpg')] py-16 mt-16">
-        <div className="md:grid md:grid-cols-2">
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-4">
           <motion.div
             initial={{ y: 100 }}
             whileInView={{ y: 0 }}

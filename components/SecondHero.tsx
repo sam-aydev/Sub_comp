@@ -6,7 +6,7 @@ import img1 from "@/public/icon26.svg";
 export default function SecondHero() {
   return (
     <div>
-      <div className="md:grid md:grid-cols-2 md:px-6 lg:grid-cols-3">
+      <div className="md:grid md:grid-cols-2 md:px-6 lg:grid-cols-3 md:w-5/6 lg:w-[93%] md:mx-auto md:place-items-center lg:mt-20">
         <motion.div
           initial={{ y: 100 }}
           whileInView={{ y: 0 }}

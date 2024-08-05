@@ -6,6 +6,7 @@ import Author8 from "@/public/author8.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Sign from "@/public/sign.svg";
 
 export default function Testimonials() {
   const settings = {
@@ -39,21 +40,34 @@ export default function Testimonials() {
         <motion.div
           initial={{ y: 100 }}
           whileInView={{ y: 0 }}
-          className=" md:w-1/2 xl:w-1/3 md:mx-auto w-4/5 mx-auto mt-10"
+          className=" md:w-1/2  md:mx-auto w-4/5 mx-auto mt-10 relative pt-20"
         >
-          <Slider {...settings}>
+          <div>
+            <Image
+              src={Author8}
+              width={400}
+              height={400}
+              alt="author8"
+              className="size-20 
+              mx-auto 
+              bg-white 
+              p-2 
+              rounded-full 
+              z-50 right-0 
+              left-0 top-0  
+              lg:-left-[470px] 
+              xl:-left-[580px]
+              lg:top-10 
+              absolute"
+            />
+          </div>
+          <Slider {...settings} className="-mt-10 lg:-mt-20">
             {data.map((item, index) => (
-              <div key={index} className="bg-black rounded-2xl  p-4 ">
+              <div
+                key={index}
+                className="bg-black rounded-[40px] lg:rounded-[80px] lg:py-8 lg:px-14  p-4 "
+              >
                 <div>
-                  <div>
-                    <Image
-                      src={Author8}
-                      width={400}
-                      height={400}
-                      alt="author8"
-                      className="size-20 mx-auto bg-white p-2 rounded-full  "
-                    />
-                  </div>
                   <p className="text-white mt-7">{item.message}</p>
                   <p className="text-yellow-500 font-semibold mt-7">
                     {item.Author}
@@ -70,6 +84,13 @@ export default function Testimonials() {
           className="text-black text-2xl font-bold px-10 mt-16 md:text-4xl md:w-1/2 md:mx-auto"
         >
           <h2>What Our Clients Say About TopTen</h2>
+          <Image
+            src={Sign}
+            alt="si"
+            width={500}
+            height={500}
+            className="w-3/4 mt-10"
+          />
         </motion.div>
       </div>
     </div>

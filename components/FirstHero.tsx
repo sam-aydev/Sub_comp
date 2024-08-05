@@ -1,12 +1,11 @@
 "use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import slide1 from "@/public/03-slide.svg";
 import slide2 from "@/public/01-slide.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PrevArrow from "./PrevArrow";
-import NextArrow from "./NextArrow";
 
 export default function FirstHero() {
   const settings = {
@@ -24,15 +23,19 @@ export default function FirstHero() {
       <Slider {...settings}>
         <div>
           <div className="bg-[#fc3e59] pt-64 pb-20 w-full h-[900px] md:flex md:px-6 ">
-            <div className="md:w-1/2">
+            <motion.div
+              initial={{ x: 100 }}
+              whileInView={{ x: 0 }}
+              className="md:w-1/2"
+            >
               <Image
                 src={slide1}
                 width={1000}
                 height={1000}
                 alt="slde"
-                className=""
+                className="h-80 md:h-full"
               />
-            </div>
+            </motion.div>
             <div className=" md:w-1/2">
               <h2 className="text-3xl font-semibold text-center w-4/5 mt-10 mx-auto md:text-left lg:text-5xl">
                 Search Media Marketing Services
@@ -66,16 +69,30 @@ export default function FirstHero() {
                 VIEW DETAILS
               </button>
             </div>
-            <Image
-              src={slide2}
-              width={700}
-              height={700}
-              alt="sld"
-              className="mt-24 w-full lg:mt-20 lg:mx-auto lg:w-[92%]"
-            />
+            <motion.div initial={{ x: 200 }} whileInView={{ x: 0 }}>
+              <Image
+                src={slide2}
+                width={700}
+                height={700}
+                alt="sld"
+                className="mt-24 w-full lg:mt-20 lg:mx-auto lg:w-[92%]"
+              />
+            </motion.div>
           </div>
         </div>
       </Slider>
+      <div className="relative lg:block hidden">
+        <div className="absolute flex justify-center items-center w-full mx-auto right-0 left-0">
+          <div className="size-44 bg-[#F1F2EC] cursor-pointer p-6 -mt-20 hover:text-white">
+            <h2 className="text-xl">Organic SEO</h2>
+            <p className="text-slate-500 mt-5">Get Top Ten Results.</p>
+          </div>
+          <div className="size-44 bg-[#FC3E59] cursor-pointer p-6 -mt-20 hover:text-white">
+            <h2 className="text-xl">SMM services</h2>
+            <p className="text-slate-500">Help with Facebook and Instagram</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
