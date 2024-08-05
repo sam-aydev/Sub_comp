@@ -23,11 +23,7 @@ export default function FirstHero() {
       <Slider {...settings}>
         <div>
           <div className="bg-[#fc3e59] pt-64 pb-20 w-full h-[900px] md:flex md:px-6 ">
-            <motion.div
-              initial={{ x: 100 }}
-              whileInView={{ x: 0 }}
-              className="md:w-1/2"
-            >
+            <motion.div>
               <Image
                 src={slide1}
                 width={1000}
