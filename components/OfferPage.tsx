@@ -11,9 +11,9 @@ export default function OfferComp() {
       <motion.div
         initial={{ y: 100 }}
         whileInView={{ y: 0 }}
-        className="mt-16 px-8 md:flex"
+        className="mt-16 px-8  md:w-4/5 md:mx-auto md:flex md:justify-around md:items-center"
       >
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 md:mx-auto">
           <h2 className="text-2xl font-bold ">
             We Offer a Full Range of Digital Marketing Services!
           </h2>
@@ -60,7 +60,7 @@ export default function OfferComp() {
             </button>
           </div>
         </div>
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 md:mx-auto">
           <div className="mt-12">
             <Image src={img2} width={500} height={600} alt="ims" className="" />
           </div>
