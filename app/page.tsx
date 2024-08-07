@@ -16,7 +16,7 @@ export default function Home() {
       <NavBar />
       <FirstHero />
       <SecondHero />
-      <Skillset />
+      {/* <Skillset /> */}
       <OfferComp />
       <CaseStudy />
       <Testimonials />
